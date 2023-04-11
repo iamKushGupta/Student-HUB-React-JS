@@ -1,0 +1,117 @@
+/*----------------------- FEEDS --------------- */
+
+.profile-photo {
+    width: 2.8rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+
+.profile-photo img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.profile {
+    padding: var(--card-padding);
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    width: 100%;
+}
+
+.feeds .feed {
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.feed .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed .user {
+  display: flex;
+  gap: 1rem;
+}
+
+.feed .photo {
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  margin: 0.7rem 0;
+}
+
+.feed .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0.6rem;
+}
+
+.feed .action-buttons i {
+  cursor: pointer;
+}
+
+.liked-by {
+  display: flex;
+}
+
+.liked-by span {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-white);
+  margin-left: -0.6rem;
+}
+
+.liked-by span:first-child {
+  margin: 0;
+}
+
+.liked-by p {
+  margin-left: 0.5rem;
+}
+
+.not-liked .not-liked-img {
+  display: inline-block;
+}
+
+.not-liked .liked-img {
+  display: none;
+}
+
+.liked .not-liked-img {
+  display: none;
+}
+
+.liked .liked-img {
+  display: inline-block;
+}
+
+.not-bookmarked .not-bookmarked-img {
+  display: inline-block;
+}
+
+.not-bookmarked .bookmarked-img {
+  display: none;
+}
+
+.bookmarked .not-bookmarked-img {
+  display: none;
+}
+
+.bookmarked .bookmarked-img {
+  display: inline-block;
+}

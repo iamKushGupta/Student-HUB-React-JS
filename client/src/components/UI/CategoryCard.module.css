@@ -1,0 +1,31 @@
+/* ------------------EXPLORE STYLES-----------------*/
+
+.category {
+  margin: 0.5rem;
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  transition: all 0.3s ease-in-out;
+}
+
+.category img {
+  border-top-left-radius: var(--card-border-radius);
+  border-top-right-radius: var(--card-border-radius);
+  max-width: 160px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.category .card-body {
+  margin: 1rem;
+}
+
+.category .topic {
+  z-index: 20;
+  color: white;
+}
+
+.category:hover {
+  background: rgb(220, 220, 220);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

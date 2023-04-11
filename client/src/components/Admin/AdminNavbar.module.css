@@ -1,0 +1,148 @@
+/* ------------NAVBAR---------------*/
+
+#profile-photo-nav {
+  cursor: pointer;
+}
+nav {
+  width: 100%;
+  background: var(--color-white);
+  padding: 0.7rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+nav .container {
+  display: flex;
+  align-items: left;
+  justify-content: space-evenly;
+}
+
+nav .container .logo {
+  left: 0;
+  font-size: 1.7rem;
+}
+
+nav .search-bar {
+  background: var(--color-light);
+  border-radius: var(--border-radius);
+  padding: var(--search-padding);
+  margin-right: 2rem;
+}
+
+nav .search-bar input[type="search"] {
+  background: transparent;
+  width: 10vw;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+}
+
+nav .search-bar input[type="search"]::placeholder {
+  color: var(--color-gray);
+}
+
+nav .search-bar .autocomplete-list {
+  position: absolute;
+  list-style-type: none;
+  top: 50px;
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-light);
+  width: 12.5vw;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+}
+
+nav .search-bar .autocomplete-list li {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 6%;
+  padding-right: 2%;
+  cursor: pointer;
+}
+
+nav .create {
+  display: flex;
+  align-items: center;
+}
+
+#create-issue-nav-bar {
+  margin: 0 0.5rem;
+}
+
+nav .container .nav-bar-menu {
+  width: fit-content;
+  margin-left: 2rem;
+  margin-right: 8rem;
+}
+
+nav .container .nav-bar-menu .menu-item {
+  margin: 0 1rem;
+  padding: 0.2rem;
+}
+
+nav .container .nav-bar-menu {
+  margin: 5px 2px 0 0;
+  color: var(--color-black);
+  position: relative;
+}
+
+/* nav .container h2{
+    margin: 5px 2px 0 0;
+    color: var(--color-black);
+    position: relative;
+} */
+
+nav .container .nav-bar-menu .menu-item i:hover {
+  color: var(--color-primary);
+}
+
+nav .container .nav-bar-menu .active {
+  border-bottom: 5px solid var(--color-primary);
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--btn-padding);
+  margin: 0;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* ----------------------------------- MEDIA QUERIES FOR SMALL LAPTOPS AND BIG TABLETs---------------------------------- */
+
+@media screen and (max-width: 1300px) {
+  nav .search-bar {
+    display: none;
+  }
+
+  nav .container .menu {
+    right: 10px;
+  }
+
+  nav .container .menu::before {
+    right: 10px;
+  }
+}
+
+/* ----------------------------------- MEDIA QUERIES FOR SMALL TABLETS AND MOBILE PHONES ---------------------------------- */
+
+@media screen and (max-width: 992px) {
+  nav .container .nav-bar-menu {
+    display: none;
+  }
+}

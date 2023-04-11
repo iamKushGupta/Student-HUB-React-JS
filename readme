@@ -1,0 +1,17 @@
+# Frontend / Client
+Set-up the env file.
+Install the dependencies using 
+```
+npm i
+```
+
+then run ```npm start``` command.
+
+# Backend / Server
+Set-up the env file.
+Install the dependencies using 
+```
+npm i
+```
+
+then run ```npm start``` command.

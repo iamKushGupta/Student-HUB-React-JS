@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  /*Here we are declaring a variable color-dark to which we assign hsl which is Hue saturation and lightness */
+  --color-white: hsl(252, 30%, 100%);
+  --color-light: hsl(252, 30%, 95%);
+  --color-gray: hsl(252, 15%, 65%);
+  --color-primary: #1abc9c;
+  --color-secondary: hsl(120, 95%, 65%);
+  --color-success: hsl(120, 95%, 65%);
+  --color-danger: hsl(0, 95%, 65%);
+  --color-dark: hsl(252, 30%, 17%);
+  --color-black: hsl(252, 30%, 10%);
+
+  --border-radius: 2rem;
+  --card-border-radius: 1rem;
+  --btn-padding: 0.6rem 1rem;
+  --search-padding: 0.6rem 1rem;
+  --card-padding: 1rem;
+
+  --sticky-top-left: 5.4rem;
+  --sticky-top-right: 5.4rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  font-size: 13px;
+}
+
+.modal-container {
+  background-color: rgb(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.post #close-modal {
+  background-color: var(--color-danger);
+  border-radius: 200px;
+  display: inline;
+  float: right;
+  width: 20px;
+  height: 20px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+header {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  padding: 17px 100px 0;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+form {
+  padding: 0 1rem;
+}
+
+.content {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+form :where(.content, .details .category) {
+  display: flex;
+  align-items: center;
+}
+
+form .content .profile-photo {
+  margin: 12px;
+  display: flex;
+  align-items: center;
+}
+
+form .content .details {
+  margin-left: -3px 0 0 12px;
+}
+
+form .content .details p {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+form .content .details .category {
+  max-width: fit-content;
+  font-size: 11px;
+  margin-top: 3px;
+  padding: 0 2px;
+  border-radius: 5px;
+  background: var(--color-gray);
+}
+
+form .content .details .category span {
+  font-size: 13px;
+  margin-top: 1px;
+  font-weight: 500;
+}
+
+form .content .details .category i:last-child {
+  font-size: 13px;
+  margin-left: 1px;
+}
+
+.post form :where(textarea, #post_button) {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.post form .description {
+  resize: none;
+  font-size: 18px;
+  margin-top: 30px;
+  min-height: 25vh;
+  background-color: var(--color-light);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.post form .tags {
+  resize: none;
+  font-size: 14px;
+  margin-top: 30px;
+  min-height: 3vh;
+  background-color: var(--color-light);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.post form .theme-emoji {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post form .theme-emoji i {
+  cursor: pointer;
+}
+
+.post form .theme-emoji i:last-child {
+  max-width: 24px;
+}
+
+.post form .options {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: max-content;
+  border-radius: 7px;
+  padding: 6px 15px;
+  margin: 15px 0;
+  border: 1px solid var(--color-gray);
+}
+
+.post form p {
+  text-align: left;
+  height: fit-content;
+  color: var(--color-gray);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.post form .options .list {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post form .options .list li {
+  list-style: none;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 50%;
+}
+
+.post form .options .list li:hover {
+  background: var(--color-gray);
+}
+
+.post form .options .list img {
+  cursor: pointer;
+  width: 23px;
+}
+
+.post form #post_button {
+  height: 53px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-white);
+  border-radius: 20px;
+}
+
+#add_file_button {
+  background: none;
+}
+
+.profile-photo {
+  width: 2.8rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-photo img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--btn-padding);
+  margin: 0;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.display-post-image {
+  width: 70%;
+  height: auto;
+  border-radius: 2rem;
+}
+
+.wrong-input textarea{
+  border: 2px solid red;
+}
+
+.wrapper ::placeholder { 
+  color: black;
+}

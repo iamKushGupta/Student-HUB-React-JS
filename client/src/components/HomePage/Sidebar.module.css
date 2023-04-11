@@ -1,0 +1,130 @@
+.btn {
+  display: inline-block;
+  padding: var(--btn-padding);
+  margin: 0;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.sidebar {
+  display: none;
+  margin-top: 1rem;
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+}
+
+.sidebar .menu-item {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+  position: relative;
+}
+
+.sidebar .menu-item:hover {
+  background: var(--color-light);
+}
+
+.sidebar i {
+  font-size: 1.4rem;
+  color: var(--color-gray);
+  margin-left: 2rem;
+  position: relative;
+}
+
+.sidebar i .notification-count {
+  background: var(--color-danger);
+  color: white;
+  font-size: 0.7rem;
+  width: fit-content;
+  border-radius: 0.8rem;
+  padding: 0.1rem 0.4rem;
+  position: absolute;
+  top: -0.2rem;
+  right: -0.3rem;
+}
+
+.sidebar h3 {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+}
+
+.sidebar .active {
+  background: var(--color-light);
+}
+
+.sidebar .active i,
+.sidebar .active h3 {
+  color: var(--color-primary);
+}
+
+.sidebar .active::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 100%;
+  position: absolute;
+  background: var(--color-primary);
+}
+
+.sidebar .menu-item:first-child.active {
+  border-top-left-radius: var(--card-border-radius);
+  overflow: hidden;
+}
+
+.sidebar .menu-item:last-child.active {
+  border-bottom-left-radius: var(--card-border-radius);
+  overflow: hidden;
+}
+
+.btn {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.text-muted {
+  color: var(--color-gray);
+}
+
+/* ----------------------------------- MEDIA QUERIES FOR SMALL LAPTOPS AND BIG TABLETs---------------------------------- */
+
+@media screen and (max-width: 1300px) {
+  .sidebar__profile {
+    display: none;
+  }
+
+  .sidebar h3 {
+    display: none;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .sidebar {
+    display: block;
+  }
+}
+
+/* ----------------------------------- MEDIA QUERIES FOR SMALL TABLETS AND MOBILE PHONES ---------------------------------- */
+
+@media screen and (max-width: 992px) {
+  .sidebar > div h3 {
+    display: none;
+  }
+}
